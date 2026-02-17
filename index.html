@@ -11,15 +11,20 @@
   </header>
   <main>
     <form>
+      <fieldset>
       <label>Nome:</label>
-      <input type="text" placeholder="Digite seu nome...">
+      <input type="text" placeholder="Digite seu nome..." required>
       <br>
       
       <label>Email:</label>
-      <input type="text" placeholder="Digite seu email...">
+      <input type="email" placeholder="Digite seu email..." required>
       <br>
+      
       <label>Senha:</label>
-      <input type="text" placeholder="Digite sua senha...">
+      <input type="password"
+      minlength="6" placeholder="Digite sua senha..." required>
+      </fieldset>
+    <button type="submit">Enviar</button>
     </form>
   </main>
   
