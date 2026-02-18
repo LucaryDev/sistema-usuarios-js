@@ -1,3 +1,5 @@
+const usuarios = []
+
 let contadorId = 0
 
 class Usuario {
@@ -8,4 +10,8 @@ class Usuario {
     this.email = email
     this.senha = senha
   }
+}
+
+function criarUsuario(nome, email, senha) {
+  usuarios.push(new Usuario(nome, email,senha))
 }
