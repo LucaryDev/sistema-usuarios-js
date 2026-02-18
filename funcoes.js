@@ -15,3 +15,7 @@ class Usuario {
 function criarUsuario(nome, email, senha) {
   usuarios.push(new Usuario(nome, email,senha))
 }
+
+function listarUsuarios() {
+  return usuarios.map(({ senha, ...usuarioSeguro }) => usuarioSeguro)
+}
