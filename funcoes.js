@@ -19,3 +19,21 @@ function criarUsuario(nome, email, senha) {
 function listarUsuarios() {
   return usuarios.map(({ senha, ...usuarioSeguro }) => usuarioSeguro)
 }
+
+function atualizarDados(id, nomeNovo, emailNovo, senhaNova) {
+  if(!id || typeof id !== "number") {
+    return "id inválido"
+  }
+  
+  const usuario = usuarios.find(u => {
+    u.id === id
+  })
+  
+  if(!usuario) return "usuario não encontrado"
+  
+    usuario.nome= nomeNovo
+    usuario.email = emailNovo
+    usuario.senha = senhaNova
+  
+  return usuario
+}
